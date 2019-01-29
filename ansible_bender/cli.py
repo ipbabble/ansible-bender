@@ -1,6 +1,21 @@
 """
 CLI for ansible builder
 """
+from __future__ import print_function
+
+import sys
+
+# let's be so gentle and print the error message even on python 2
+if sys.version_info.major <= 2:
+    error_message = """\
+It looks like you are running ansible-bender with python 2. I'm sorry but bender
+runs only on shiny python 3. Please see installation steps at official project
+page:
+
+https://github.com/TomasTomecek/ansible-bender"""
+    print(error_message, file=sys.stderr)
+    sys.exit(2)
+
 
 import argparse
 import json
