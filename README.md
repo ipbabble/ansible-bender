@@ -94,6 +94,21 @@ be present on your host system:
     python 2 even if it's invoked with python 3 on the control machine.
 
 
+## Target image metadata
+
+There are two ways of setting metadata on the final. With dockerfiles, this is being usally done with instructions such as `LABEL`, `ENV` or `EXPOSE`.
+
+Bender supports two ways:
+* options of `ansible-bender build`
+* setting specific variables inside your playbook
+
+### Via CLI
+
+
+
+### Via playbook vars
+
+
 ## Usage
 
 You may noticed that I refer to `ansible-bender` as ab. That was the initial
